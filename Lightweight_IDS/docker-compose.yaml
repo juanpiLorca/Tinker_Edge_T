@@ -1,12 +1,12 @@
 services:
   
-  sciky-learn-test: 
-    image: scikit-learn-test
+  sciky-thinker-test: 
+    image: scikit-thinker-test
     build: 
       context: ./src
       dockerfile: Dockerfile
-    container_name: scikit-learn-test
-    runtime: nvidia
+      platform: linux/arm64
+    container_name: scikit-thinker-test
     volumes: 
       - ./src:/workspace
     network_mode: host
