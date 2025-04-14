@@ -1,0 +1,15 @@
+services:
+  
+  sciky-learn-test: 
+    image: scikit-learn-test
+    build: 
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: scikit-learn-test
+    runtime: nvidia
+    volumes: 
+      - ./src:/workspace
+    network_mode: host
+    env_file:
+      - .env  
+    restart: always
